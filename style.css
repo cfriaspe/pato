@@ -1,0 +1,229 @@
+:root {
+  --bg: #1A2A40;           /* fondo principal */
+  --card: #253C59;         /* bloques secundarios */
+  --primary: #42628C;      /* color acento */
+  --text-light: #F2F2F2;   /* texto claro */
+  --text-dark: #0D0D0D;    /* texto oscuro */
+  --muted: #A3B3C5;        /* texto suave */
+  --ring: rgba(66, 98, 140, 0.35);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text-light);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Corrección de colores */
+body, p, li, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light) !important;
+}
+.text-muted, .text-muted-contrast {
+  color: var(--muted) !important;
+}
+.timeline-content h5, .timeline-content p, .timeline-content li {
+  color: var(--text-light) !important;
+}
+.navbar .nav-link, .navbar-brand {
+  color: var(--text-light) !important;
+}
+.btn-primary { color: #fff !important; }
+
+.text-muted-contrast { color: var(--muted) !important; }
+.section { padding: 80px 0; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); }
+.section.alt { background: radial-gradient(1200px 600px at 10% -10%, rgba(66,98,140,.08), transparent),
+                        radial-gradient(800px 400px at 100% 10%, rgba(148,163,184,.08), transparent); }
+.section-title { font-weight: 700; margin-bottom: 18px; color: var(--text-light); }
+.section-lead { font-size: 1.05rem; color: var(--muted); }
+
+/* Navbar */
+.glass-nav {
+  backdrop-filter: saturate(160%) blur(10px);
+  background: rgba(26,42,64,0.85) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar-brand { letter-spacing: .5px; }
+.navbar .nav-link { opacity: .9; }
+.navbar .nav-link:hover { color: var(--primary); }
+
+/* Hero */
+.hero { padding-top: 96px; padding-bottom: 96px; position: relative; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(600px 300px at 20% 0%, rgba(66,98,140,.25), transparent),
+    radial-gradient(500px 250px at 90% 10%, rgba(37,60,89,.25), transparent),
+    linear-gradient(180deg, rgba(26,42,64,.8), rgba(26,42,64,.4));
+}
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+/* ===== Timeline ===== */
+.timeline {
+  position: relative;
+  margin-left: 1.5rem;                /* más margen general */
+  padding-left: 2rem;                 /* separa la línea del texto */
+  border-left: 2px dashed rgba(255,255,255,.15);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 0.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -20px;                        /* mueve el punto más lejos del texto */
+  top: 6px;                           /* centra verticalmente */
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(66,98,140,0.25); /* halo suave */
+}
+
+.timeline-content h5 {
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.timeline-content p, 
+.timeline-content li {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+/* Habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 14px;
+}
+@media (min-width: 576px) { .skills-grid { grid-template-columns: repeat(3,1fr);} }
+@media (min-width: 992px) { .skills-grid { grid-template-columns: repeat(6,1fr);} }
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem .8rem;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  background: rgba(37,60,89,.5);
+  color: var(--text-light);
+}
+.skill-pill i { color: var(--primary); }
+
+/* Portafolio */
+.portfolio-card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+}
+.portfolio-thumb { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
+.portfolio-meta { color: var(--muted); font-size: .9rem; }
+
+/* Contacto */
+.form-control, .form-select {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.2);
+  color: var(--text-light);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 .25rem var(--ring);
+  color: var(--text-light);
+}
+.form-label { color: var(--text-light); }
+
+/* Footer */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  color: var(--muted);
+}
+.footer a { color: var(--text-light); text-decoration: none; opacity: .9; }
+.footer a:hover { color: var(--primary); }
+
+/* Botones */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text-light);
+}
+.btn-outline-light {
+  border-color: rgba(255,255,255,.5);
+  color: var(--text-light);
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,.08);
+}
+
+@media (max-width: 991.98px) {
+  .hero { text-align: center; }
+  .hero .btn { width: 100%; max-width: 260px; }
+}
+
+/* ===== Galería 2x2 totalmente responsiva ===== */
+.gallery-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 10px;
+}
+
+.gallery-2x2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-2x2 img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Móvil (pantallas menores a 768px) → 1 columna */
+@media (max-width: 768px) {
+  .gallery-2x2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 20px;
+  }
+}
+
+/* Tablet → 2 columnas pero con más aire */
+@media (min-width: 769px) and (max-width: 991px) {
+  .gallery-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Desktop grande → máximo 900px centrado */
+@media (min-width: 992px) {
+  .gallery-2x2 {
+    max-width: 900px;
+  }
+}
