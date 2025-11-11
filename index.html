@@ -180,33 +180,41 @@
     </div>
   </div>
 </section>
+ 
 
-<!--Contacto-->
+<!-- CONTACTO -->
+<section id="contacto" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title mb-3">Contacto</h2>
+    <p class="section-lead mb-4">
+      Si deseas conocer más sobre mis proyectos o colaborar en nuevas iniciativas, 
+      completa el formulario y te responderé a la brevedad.
+    </p>
 
-<form action="https://formsubmit.co/patovelasquezz@gmail.com" method="POST">
-  <!-- Evita captchas y agrega redirección -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://tuusuario.github.io/portafolio/#contacto">
+    <form action="https://formsubmit.co/patovelasquezz@gmail.com" method="POST">
+      <!-- Evita captcha y define redirección -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://tuusuario.github.io/portafolio/#contacto">
 
-  <div class="mb-3">
-    <label class="form-label">Nombre</label>
-    <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" required>
+      <div class="form-group mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="nombre@correo.com" required>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    </form>
   </div>
-
-  <div class="mb-3">
-    <label class="form-label">Correo electrónico</label>
-    <input type="email" class="form-control" name="email" placeholder="nombre@correo.com" required>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label">Mensaje</label>
-    <textarea class="form-control" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-  </div>
-
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary btn-lg px-5">Enviar mensaje</button>
-  </div>
-</form>
+</section>
 
 
 

@@ -137,18 +137,108 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
 .portfolio-thumb { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
 .portfolio-meta { color: var(--muted); font-size: .9rem; }
 
-/* Contacto */
-.form-control, .form-select {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.2);
+
+/* ===== CONTACTO (versión ampliada y elegante) ===== */
+#contacto {
+  background: linear-gradient(180deg, #1A2A40, #253C59);
+  padding: 100px 0;
   color: var(--text-light);
 }
-.form-control:focus, .form-select:focus {
+
+#contacto .section-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  font-size: 2rem;
+}
+
+#contacto .section-lead {
+  color: var(--muted);
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  font-size: 1.05rem;
+}
+
+/* Contenedor del formulario */
+#contacto form {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 50px 45px;
+  max-width: 720px;                /* 🔹 más ancho */
+  margin: 0 auto;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+/* Campos */
+#contacto .form-label {
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+#contacto .form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-light);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#contacto .form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
   border-color: var(--primary);
-  box-shadow: 0 0 0 .25rem var(--ring);
-  color: var(--text-light);
+  box-shadow: 0 0 0 0.25rem var(--ring);
+  color: #fff;
 }
-.form-label { color: var(--text-light); }
+
+/* Textarea más alto */
+#contacto textarea.form-control {
+  resize: none;
+  height: 180px;
+}
+
+/* Botón */
+#contacto .btn-primary {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 20px auto 0 auto;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+#contacto .btn-primary:hover {
+  background: #5c7fc4;
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #contacto {
+    padding: 70px 0;
+  }
+  #contacto form {
+    padding: 30px 22px;
+    max-width: 92%;
+  }
+  #contacto .section-title {
+    font-size: 1.6rem;
+  }
+}
+
 
 /* Footer */
 .footer {
