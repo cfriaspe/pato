@@ -138,52 +138,61 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
 .portfolio-meta { color: var(--muted); font-size: .9rem; }
 
 
-/* ===== CONTACTO (versión ampliada y elegante) ===== */
+/* ===== CONTACTO (versión fija para GitHub Pages) ===== */
 #contacto {
-  background: linear-gradient(180deg, #1A2A40, #253C59);
+  background: linear-gradient(180deg, #1A2A40 0%, #253C59 100%);
   padding: 100px 0;
-  color: var(--text-light);
+  color: #F2F2F2;
 }
 
+/* Centra todo el bloque */
+.contacto-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Título y subtítulo */
 #contacto .section-title {
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--text-light);
-  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
 #contacto .section-lead {
-  color: var(--muted);
-  max-width: 750px;
+  color: #A3B3C5;
+  font-size: 1.1rem;
+  max-width: 720px;
   margin: 0 auto 50px auto;
-  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-/* Contenedor del formulario */
+/* Formulario independiente */
 #contacto form {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 50px 45px;
-  max-width: 720px;                /* 🔹 más ancho */
+  padding: 50px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
   margin: 0 auto;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
   text-align: left;
 }
 
 /* Campos */
 #contacto .form-label {
+  display: block;
   font-weight: 500;
-  color: var(--text-light);
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #F2F2F2;
 }
 
 #contacto .form-control {
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--text-light);
+  color: #F2F2F2;
   border-radius: 10px;
   padding: 14px 16px;
   margin-bottom: 22px;
@@ -193,12 +202,11 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
 
 #contacto .form-control:focus {
   background: rgba(255, 255, 255, 0.12);
-  border-color: var(--primary);
-  box-shadow: 0 0 0 0.25rem var(--ring);
+  border-color: #42628C;
+  box-shadow: 0 0 0 0.25rem rgba(66, 98, 140, 0.35);
   color: #fff;
 }
 
-/* Textarea más alto */
 #contacto textarea.form-control {
   resize: none;
   height: 180px;
@@ -208,21 +216,20 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
 #contacto .btn-primary {
   display: block;
   width: 100%;
-  max-width: 240px;
-  margin: 20px auto 0 auto;
-  background: var(--primary);
+  max-width: 260px;
+  margin: 30px auto 0 auto;
+  background: linear-gradient(90deg, #42628C, #5076b8);
   border: none;
   border-radius: 10px;
   padding: 14px 30px;
   font-size: 1.05rem;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.2s ease;
-  text-align: center;
 }
 
 #contacto .btn-primary:hover {
-  background: #5c7fc4;
-  transform: translateY(-2px);
+  filter: brightness(1.15);
+  transform: translateY(-3px);
 }
 
 /* Responsivo */
@@ -230,14 +237,43 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
   #contacto {
     padding: 70px 0;
   }
-  #contacto form {
-    padding: 30px 22px;
-    max-width: 92%;
+
+  .contacto-wrapper {
+    padding: 24px 16px;
   }
+
+  #contacto form {
+    padding: 24px 18px;   /* ← aquí va el padding móvil */
+    max-width: 92%;
+    border-radius: 12px;
+  }
+
   #contacto .section-title {
     font-size: 1.6rem;
   }
+
+  #contacto .section-lead {
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+  }
+
+  #contacto .form-control {
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+  }
+
+  #contacto textarea.form-control {
+    height: 140px;
+  }
+
+  #contacto .btn-primary {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+  }
 }
+
 
 
 /* Footer */
@@ -318,56 +354,4 @@ body, p, li, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ===== MEJORA FINAL CONTACTO (para GitHub Pages) ===== */
-
-/* Fondo con leve profundidad */
-#contacto {
-  background: radial-gradient(circle at top, #253C59 0%, #1A2A40 80%);
-}
-
-/* Contenedor */
-#contacto form {
-  max-width: 780px;           /* un poco más ancho */
-  padding: 60px 50px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-}
-
-/* Campos */
-#contacto .form-control {
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 1rem;
-}
-
-/* Botón más visible */
-#contacto .btn-primary {
-  background: linear-gradient(90deg, #42628C, #5076b8);
-  border: none;
-  font-weight: 500;
-  padding: 12px 40px;
-  max-width: 260px;
-  margin: 25px auto 0 auto;
-  display: block;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-#contacto .btn-primary:hover {
-  filter: brightness(1.15);
-  transform: translateY(-3px);
-}
-
-/* Títulos más grandes */
-#contacto .section-title {
-  font-size: 2.2rem;
-}
-
-#contacto .section-lead {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 800px;
-}
 

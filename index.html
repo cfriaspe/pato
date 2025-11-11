@@ -184,32 +184,25 @@
 
 <!-- CONTACTO -->
 <section id="contacto" data-aos="fade-up">
-  <div class="container text-center">
-    <h2 class="section-title mb-3">Contacto</h2>
-    <p class="section-lead mb-4">
-      Si deseas conocer más sobre mis proyectos o colaborar en nuevas iniciativas, 
+  <div class="contacto-wrapper">
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-lead">
+      Si deseas conocer más sobre mis proyectos o colaborar en nuevas iniciativas,
       completa el formulario y te responderé a la brevedad.
     </p>
 
     <form action="https://formsubmit.co/patovelasquezz@gmail.com" method="POST">
-      <!-- Evita captcha y define redirección -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://tuusuario.github.io/portafolio/#contacto">
 
-      <div class="form-group mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
-      </div>
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
 
-      <div class="form-group mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="nombre@correo.com" required>
-      </div>
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="nombre@correo.com" required>
 
-      <div class="form-group mb-4">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      </div>
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
 
       <button type="submit" class="btn btn-primary">Enviar mensaje</button>
     </form>
